@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Home</title>
+</head>
+
+<body>
+    <div class="main-content">
+    <h1>{{>header}}</h1>
+    <p>{{information}}</p>
+    <form>
+
+        <input placeholder="Type your location" type="text" id="search-bar">
+        <button type="submit">Search</button>
+    </form> 
+    <div id="weather-container">
+
+    </div>
+    </div>
+    {{>footer}}
+    <script src="/js/front-end.js"></script>
+</body>
+
+</html>

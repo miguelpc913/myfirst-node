@@ -73,6 +73,6 @@ app.get('*' , (req, res) =>{
     })
 })
 
-
+console.log(port);
 
 app.listen(port);

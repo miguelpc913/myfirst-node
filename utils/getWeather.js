@@ -8,12 +8,15 @@ const getWeather = ({altitude , latitude , place} = {} , callback) =>{
         if(error){
             callback(error , null);
         }else{
-            const {summary , temperature , precipProbability} = response.body.currently;
+            
+            const {summary , temperature , precipProbability , humidity} = response.body.currently;
+            console.log(humidity);
             callback(null , {
+                humidity,
                 location : place,
                 weather: summary,
-                temperature: temperature,
-                precipProbability: precipProbability
+                temperature,
+                precipProbability
             });
             
             //console.log(`${place} , ${summary}, temperatura: ${temperature} C° , porcentaje de lluvia: ${precipProbability}`);

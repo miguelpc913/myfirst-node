@@ -17,13 +17,14 @@ const getData = (location , callback) =>{
 }) 
 }
 
-const render = ({location , precipProbability, temperature , weather } = {}) =>{
+const render = ({location , precipProbability, temperature , weather , humidity } = {}) =>{
     selectors.weather.innerHTML = `
         <h5>${location}</h5>
         <div>
             <p>Precipitation probability: ${precipProbability}</p>
             <p>Temperature: ${temperature}</p>
             <p>Weather: ${weather}</p>
+            <p>Humedad: ${humidity}</p>
         </div>
     `;
 }

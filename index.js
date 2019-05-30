@@ -9,6 +9,10 @@ const getWeather = require('./utils/getWeather');
 //Setup Express
 app.use(express.static(path.join(__dirname, './public')));
 
+//Port
+
+const port = process.env.PORT || 3000;
+
 
 //Setup handlebars
 app.set('view engine' , 'hbs');
@@ -71,4 +75,4 @@ app.get('*' , (req, res) =>{
 
 
 
-app.listen(3000);
+app.listen(port);

@@ -5,7 +5,7 @@ const selectors = {
 }
 
 const getData = (location , callback) =>{
-    fetch(`http://localhost:3000/weather?address=${location}`).then( response  =>{
+    fetch(`/weather?address=${location}`).then( response  =>{
     response.json().then(data =>{
         if(!data.hasOwnProperty("location")){
             callback(null , data.error);  
